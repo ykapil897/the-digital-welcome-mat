@@ -2,7 +2,8 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { 
   Brain, Database, Cloud, Settings, Code, Layers, 
-  Workflow, Zap, BookOpen, Calendar
+  Workflow, Zap, BarChart, Calendar, GitBranch, Container,
+  MessageSquare, Radio, Server, HardDrive
 } from "lucide-react";
 
 const TechStack = () => {
@@ -10,14 +11,37 @@ const TechStack = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const techItems = [
-    "Python", "Java", "C/C++", "JavaScript", "TypeScript",
-    "Node.js", "FastAPI", "REST APIs", "WebSockets", "Socket.IO", "WebRTC",
-    "PostgreSQL", "MongoDB", "Redis", "SQLite",
-    "Apache Spark", "Databricks",
-    "AWS (EC2, S3, Redshift)", "Azure",
-    "Docker", "Airflow", "Git", "CI/CD", "k6", "Streamlit", "Power BI",
-    "RabbitMQ", "FAISS", "Vector Stores", "OpenAI", "Groq",
-    "many more coming..."
+    { icon: Code, label: "Python" },
+    { icon: Code, label: "Java" },
+    { icon: Code, label: "C/C++" },
+    { icon: Code, label: "JavaScript" },
+    { icon: Code, label: "TypeScript" },
+    { icon: Server, label: "Node.js" },
+    { icon: Zap, label: "FastAPI" },
+    { icon: Settings, label: "REST APIs" },
+    { icon: Radio, label: "WebSockets" },
+    { icon: Radio, label: "Socket.IO" },
+    { icon: Radio, label: "WebRTC" },
+    { icon: Database, label: "PostgreSQL" },
+    { icon: Database, label: "MongoDB" },
+    { icon: HardDrive, label: "Redis" },
+    { icon: Database, label: "SQLite" },
+    { icon: Workflow, label: "Apache Spark" },
+    { icon: Workflow, label: "Databricks" },
+    { icon: Cloud, label: "AWS (EC2, S3, Redshift)" },
+    { icon: Cloud, label: "Azure" },
+    { icon: Container, label: "Docker" },
+    { icon: Workflow, label: "Airflow" },
+    { icon: GitBranch, label: "Git" },
+    { icon: Settings, label: "CI/CD" },
+    { icon: BarChart, label: "k6" },
+    { icon: Layers, label: "Streamlit" },
+    { icon: BarChart, label: "Power BI" },
+    { icon: MessageSquare, label: "RabbitMQ" },
+    { icon: Brain, label: "FAISS" },
+    { icon: Brain, label: "Vector Stores" },
+    { icon: Brain, label: "OpenAI" },
+    { icon: Brain, label: "Groq" },
   ];
 
   const concepts = [
@@ -53,27 +77,21 @@ const TechStack = () => {
         </motion.div>
       </div>
 
-      {/* Marquee */}
-      <div className="relative mb-20">
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10" />
-        
-        <div className="overflow-hidden">
-          <motion.div 
-            className="marquee flex gap-4 py-4"
-            initial={{ opacity: 0 }}
-            animate={isInView ? { opacity: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            {[...techItems, ...techItems].map((tech, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 px-5 py-3 bg-secondary rounded-lg border border-border hover:border-primary/50 transition-colors whitespace-nowrap"
-              >
-                <span className="text-sm font-medium">{tech}</span>
-              </div>
-            ))}
-          </motion.div>
+      {/* Tech Stack Grid */}
+      <div className="max-w-6xl mx-auto px-4 mb-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {techItems.map((tech, index) => (
+            <motion.div
+              key={tech.label}
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.03 }}
+              className="group glass glass-border rounded-xl p-4 hover:border-primary/50 transition-all duration-300"
+            >
+              <tech.icon className="w-6 h-6 text-primary mb-3 group-hover:scale-110 transition-transform" />
+              <span className="text-sm font-medium">{tech.label}</span>
+            </motion.div>
+          ))}
         </div>
       </div>
 
