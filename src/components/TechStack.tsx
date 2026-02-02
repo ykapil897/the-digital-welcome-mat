@@ -131,13 +131,13 @@ const TechStack = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center"
         >
           <span className="text-muted-foreground">...and many more coming!</span>
-          <a
+          {/* <a
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow"
           >
             <Calendar className="w-4 h-4" />
             Book a 1:1 Session
-          </a>
+          </a>  */}
         </motion.div>
       </div>
     </section>

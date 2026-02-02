@@ -77,7 +77,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          <span className="text-gradient glow-text">Your Name</span>
+          <span className="text-gradient glow-text">Kapil Yadav</span>
         </motion.h1>
 
         <motion.p
@@ -86,7 +86,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Building scalable systems & crafting elegant solutions
+          Building scalable systems & crafting AI solutions
         </motion.p>
 
         {/* Book a 1:1 Session Button */}
@@ -97,7 +97,7 @@ const Hero = () => {
           className="mb-10"
         >
           <button
-            onClick={() => scrollToSection("contact")}
+            onClick={() => window.open("https://calendly.com/ykapil897/30min", "_blank")}
             className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-primary text-primary-foreground font-display font-semibold rounded-lg transition-all duration-300 hover:scale-105 glow"
           >
             <Calendar className="w-5 h-5" />

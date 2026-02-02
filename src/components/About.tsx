@@ -16,9 +16,9 @@ const About = () => {
   ];
 
   const socialLinks = [
-    { icon: Github, label: "GitHub", href: "https://github.com" },
-    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-    { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/ykapil897" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/kapil-yadav-836341254/" },
+    // { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
   ];
 
   return (

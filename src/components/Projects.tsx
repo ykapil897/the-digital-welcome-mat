@@ -5,24 +5,24 @@ import { useState } from "react";
 
 const projects = [
   {
-    title: "Distributed Data Pipeline",
-    description: "A scalable ETL pipeline processing millions of records daily using Apache Spark and AWS.",
-    tags: ["Apache Spark", "AWS", "Python", "Airflow"],
-    github: "https://github.com",
-    live: "#",
+    title: "Chess Video App",
+    description: "A real-time chess app with server-validated gameplay and live video/audio support.",
+    tags: ["React", "Node.js", "Socket.IO", "WebRTC", "Docker"],
+    github: "https://github.com/ykapil897/chess-video-app",
+    live: "https://drive.google.com/file/d/1dBZXKkxOf7_g8z4HOnu-YQWZCDmVY9R7/view?usp=sharing",
   },
   {
-    title: "Real-time Chat Platform",
-    description: "WebSocket-based chat application with video calls using WebRTC and Socket.IO.",
-    tags: ["WebRTC", "Socket.IO", "Node.js", "Redis"],
-    github: "https://github.com",
-    live: "#",
+    title: "Order Inventory System",
+    description: "Built a strongly consistent, scalable order system with idempotent APIs and load-tested performance.",
+    tags: ["PostgreSQL", "Redis", "Node.js", "RabbitMQ", "Docker"],
+    github: "https://github.com/ykapil897/order-inventory-system",
+    live: "https://drive.google.com/file/d/1EWforEGEv-19Z5GNC8-jKlxlQ6FxjckS/view",
   },
   {
-    title: "AI-Powered RAG System",
-    description: "Retrieval-Augmented Generation system with vector stores and LLM integration.",
-    tags: ["OpenAI", "FAISS", "FastAPI", "PostgreSQL"],
-    github: "https://github.com",
+    title: "Advertisement Response Analysis",
+    description: "Built a Dockerized, scalable analytics system with real-time pipelines, optimized ML targeting, and reliable low-latency serving.",
+    tags: ["FastAPI", "React", "MongoDB", "Docker", "Python", "Scikit-learn"],
+    github: "https://github.com/ykapil897/Advertisement-Response-Analysis",
     live: "#",
   },
   {
@@ -158,7 +158,7 @@ const Projects = () => {
                       className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg border border-primary/30 hover:bg-primary/20 transition-colors text-sm text-primary"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      Live
+                      Video
                     </a>
                   </div>
                 </div>
