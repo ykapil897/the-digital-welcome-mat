@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Github, Linkedin, Twitter, Coffee, Code2, Gamepad2, Music, BookOpen } from "lucide-react";
+import { Github, Linkedin, Twitter, Code2, Gamepad2, Music, BookOpen, Brain, Dumbbell, Star } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
@@ -9,10 +9,10 @@ const About = () => {
 
   const hobbies = [
     { icon: Code2, label: "Coding" },
-    { icon: Gamepad2, label: "Gaming" },
-    { icon: Music, label: "Music" },
+    { icon: Dumbbell, label: "Gym" },
+    { icon: Brain, label: "Yoga" },
     { icon: BookOpen, label: "Reading" },
-    { icon: Coffee, label: "Coffee" },
+    { icon: Star, label: "Spirituality" },
   ];
 
   const socialLinks = [
